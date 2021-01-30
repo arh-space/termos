@@ -175,7 +175,7 @@ async function starts() {
 					ownerG: '「OWNER GROUP ONLY」\n\nMaaf, Command hanya bisa di gunakan oleh Owner Group!',
 					ownerB: '「OWNER BOT ONLY」\n\n\Maaf, Command hanya bisa di gunakan oleh Owner MYTH Bot ',
 					premium: '「PREMIUM USER ONLY」\n\nMaaf, Command hanya bisa digunakan oleh User Premium!',
-					userB: `「USER BARU」\n\nHai kak *${pushname2}* :)\nKamu belum terdaftar sebagai User *${name}* \nSilahkan daftar terlebih dahulu ya dengan cara :\n\n Ketik : ${prefix}daftar ${pushname2}/Umur/Kota Asal\nContoh : ${prefix}daftar Rawrrr/19/Pekanbaru`,
+					userB: `「NEW USER」\n\nHai kak *${pushname2}* :)\nKamu belum terdaftar sebagai User \n*${name}* \nSilahkan daftar terlebih dahulu ya dengan cara :\n\nKetik command : ${prefix}daftar Nama/Umur/Asal Kota\nContoh : ${prefix}daftar ${pushname2}/19/Pekanbaru`,
 					admin: '「ADMIN GROUP ONLY」\n\nMaaf, perintah ini hanya bisa digunakan oleh Admin Group!',
 					Badmin: '「BOT NOT ADMIN」\n\nMaaf, Command ini hanya bisa digunakan saat Bot menjadi Admin Group!'
 				}
@@ -428,7 +428,7 @@ async function starts() {
 					asal = reg.split("/")[2];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`「DATA USER」\n\n Hai kak! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data pendaftaran Kamu : \n\nSN: TM08GK8PPHBSJDH10J\`\`\`\n\n\`\`\`Pada ${date} ${time}\`\`\`\n\`\`\`[Nama]: ${jeneng}\`\`\`\n\`\`\`[Nomor]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`[Umur]: ${umure} Tahun\`\`\`\n\`\`\`[Asal]: ${asal}\`\`\`\n\`\`\`Untuk menggunakan bot\`\`\`\n\`\`\`silahkan\`\`\`\n\`\`\`kirim ${prefix}help/menu\`\`\`\n\`\`\`\nTotal Pengguna: ${user.length} Orang\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `「DATA USER」\n\nHai kak ${pushname2}! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data Pendaftaran Kamu : Pendaftaran pada : Pada ${date} ${time}\n\n[Nama]: ${jeneng}\n[Nomor]: wa.me/${sender.split("@")[0]}\n[Umur]: ${umure} Tahun\n[Asal]: ${asal}\n\nUntuk menggunakan bot silahkan kirim ${prefix}help/menu\n\nTotal Pengguna: ${user.length} Orang\`\`\``, text, {quoted: mek})
 					break 
 			case 'help':
 			case 'menu':
