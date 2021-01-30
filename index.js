@@ -544,7 +544,7 @@ async function starts() {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(「ERROR」Gagal, pada saat mengkonversi ${tipe} ke sticker)
+								reply(`\`\`\`Gagal, pada saat mengkonversi ${tipe} ke stiker\`\`\``)
 							})
 							.on('end', function () {
 								console.log('Finish')
