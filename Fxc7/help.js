@@ -1,5 +1,5 @@
 
-const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) => { 
+const help = (prefix, instagram, name, buffer, uptime, pushname2, user, tanggal, jam) => { 
 	return `
 ┏━━━━━━━━━━━━━━━━━━━━━━
 ┃ Hai *${pushname2}* 👋 
@@ -278,7 +278,7 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}smule [Link Video Smule]*
 
 
-Follow Instagram : https://instagram.com/ayyiin
+Follow Instagram : ${instagram}
 Owner : Rawrrr
 Bot : MYTH BOT
 Credit : Fxc7 
