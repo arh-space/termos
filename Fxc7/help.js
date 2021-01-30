@@ -1,18 +1,16 @@
 
 const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) => { 
 	return `
-┏━━━━━❬ *ABOUT ${name}* ❭━━━━━━━
-┃
+┏━━━━━━━━━━━━━━━━━━━━━━
 ┃ Hai *${pushname2}* 👋 
-┃
 ┃ Prefix : 「 *.* 」
 ┃ Total Pengguna: *${user.length} User*
 ┃ Total Donasi: *0%* 🙂
 ┃ Runtime Bot : ${kyun(uptime)}
-┃ Date : *${tanggal}*, *${jam} WIB*
+┃ Date : *${tanggal}*
+┃ Time : *${jam} WIB*
 ┃ Version : *6.5.0*
-┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┗━━━━━━━━━━━━━━━━━━━━━━
 
 ❒ 〖BOT MENU〗
 
@@ -34,7 +32,7 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ❒ 〖MEDIA & DOWNLOADER MENU〗
 
 ✦ *${prefix}tiktokstalk [username]*
-✦ *${prefix}igstalk [_farhan_xcode7]*
+✦ *${prefix}igstalk [ayyiin]*
 ✦ *${prefix}insta [Link]*
 ✦ *${prefix}instastory [username]*
 ✦ *${prefix}ssweb [url]*
@@ -70,8 +68,6 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}nobg*
 ✦ *${prefix}tomp3*
 ✦ *${prefix}ocr*
-
-*ERROR*
 ✦ *${prefix}imoji [❤️]*
 ✦ *${prefix}cgbutton [Teks]*
 ✦ *${prefix}csbutton [Teks]*
@@ -115,7 +111,6 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}cphlogo [Teks/BOT]*
 ✦ *${prefix}quotemaker [tx/wtrmk/tema]*
 ✦ *${prefix}nulis [nama/kelas/text]*
-*ERROR*
 
 
 ❒ 〖GROUP MENU〗
@@ -201,14 +196,15 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}hekerbucin*
 ✦ *${prefix}katailham*
 ✦ *${prefix}translate [en/Apa kabar?]*
-✦ *${prefix}pasangan [Farhan/Iriene]*
-✦ *${prefix}gantengcek [Farhan]*
+✦ *${prefix}pasangan [Rawrrr/Iriene]*
+✦ *${prefix}gantengcek [Rawrrr]*
 ✦ *${prefix}cantikcek [Iriene]*
-✦ *${prefix}artinama [Farhan]*
-✦ *${prefix}persengay [Topan]*
-✦ *${prefix}pbucin [Farhan]*
-✦ *${prefix}bpfont [Farhan]*
+✦ *${prefix}artinama [Rawrrr]*
+✦ *${prefix}persengay [Ilham]*
+✦ *${prefix}pbucin [Rawrrr]*
+✦ *${prefix}bpfont [Rawrrr]*
 ✦ *${prefix}textstyle [Teks]*
+
 
 ❒ 〖MISC MENU〗
 
@@ -218,25 +214,25 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}wiki [Adolf Hitler]*
 ✦ *${prefix}brainly [pertanyaan]*
 ✦ *${prefix}resepmasakan [Tempe]*
-✦ *${prefix}map [Banyuwangi]*
+✦ *${prefix}map [Pekanbaru]*
 ✦ *${prefix}film [Fast and Farious]*
 ✦ *${prefix}pinterest [gambar kucing]*
-✦ *${prefix}infocuaca [Banyuwangi]*
-✦ *${prefix}jamdunia [Banyuwangi]*
+✦ *${prefix}infocuaca [Pekanbaru]*
+✦ *${prefix}jamdunia [Pekanbaru]*
 ✦ *${prefix}mimpi [Ular]*
 ✦ *${prefix}tinyurl [link]*
 ✦ *${prefix}bitly [link]*
 ✦ *${prefix}pastebin [teks]*
-✦ *${prefix}jadwalsholat [Banyuwangi]*
+✦ *${prefix}jadwalsholat [Pekanbaru]*
 ✦ *${prefix}quran*
 ✦ *${prefix}quransurah [1]*
 ✦ *${prefix}tafsir [1/5]*
 ✦ *${prefix}spamcall [083xxxxxxxxx]*
 ✦ *${prefix}spamsms [083xxxxxxxx/jumlah]*
-✦ *${prefix}spamgmail [farhanxcode7@gmail.com]*
+✦ *${prefix}spamgmail [Rawrrr@gmail.com]*
 
 
-❒ 〖OTHER MENU〗
+❒ 〖TOOLS MENU〗
 
 ✦ *${prefix}becrypt [string]*
 ✦ *${prefix}encode64 [string]*
@@ -282,12 +278,11 @@ const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) =>
 ✦ *${prefix}smule [Link Video Smule]*
 
 
-Follow My Instagram : ${instagram}
+Follow Instagram : https://instagram.com/ayyiin
 Owner : Rawrrr
+Bot : MYTH BOT
 Credit : Fxc7 
-Bot : MYTH
-
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
+`
 }
 exports.help = help
 function kyun(seconds){
