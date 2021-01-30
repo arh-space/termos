@@ -175,7 +175,7 @@ async function starts() {
 					ownerG: '「OWNER GROUP ONLY」\n\nMaaf, Command hanya bisa di gunakan oleh Owner Group!',
 					ownerB: '「OWNER BOT ONLY」\n\n\Maaf, Command hanya bisa di gunakan oleh Owner MYTH Bot ',
 					premium: '「PREMIUM USER ONLY」\n\nMaaf, Command hanya bisa digunakan oleh User Premium!',
-					userB: `「NEW USER」\n\nHai kak *${pushname2}* :)\nKamu belum terdaftar sebagai User \n*${name}* \nSilahkan daftar terlebih dahulu ya dengan cara :\n\nKetik command : ${prefix}daftar Nama/Umur/Asal Kota\nContoh : ${prefix}daftar ${pushname2}/19/Pekanbaru`,
+					userB: `「NEW USER」\n\nHai kak *${pushname2}* :)\nKamu belum terdaftar! \nSilahkan daftar terlebih dahulu ya dengan cara :\n\nKetik command : ${prefix}daftar Nama/Umur/Asal Kota\nContoh : ${prefix}daftar ${pushname2}/19/Pekanbaru`,
 					admin: '「ADMIN GROUP ONLY」\n\nMaaf, perintah ini hanya bisa digunakan oleh Admin Group!',
 					Badmin: '「BOT NOT ADMIN」\n\nMaaf, Command ini hanya bisa digunakan saat Bot menjadi Admin Group!'
 				}
@@ -407,7 +407,6 @@ async function starts() {
 				case 'totaluser':
 					client.updatePresence(from, Presence.composing) 
 					if (!isUser) return reply(mess.only.userB)
-					if (!isOwner) return reply(mess.only.ownerB)    
 					teks = `「 *TOTAL USER ${name}* 」\n`
 					no = 0
 					for (let hehehe of user) {
@@ -428,7 +427,7 @@ async function starts() {
 					asal = reg.split("/")[2];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `「DATA USER」\n\nHai kak ${pushname2}! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data Pendaftaran Kamu : Pendaftaran pada : Pada ${date} ${time}\n\n[Nama]: ${jeneng}\n[Nomor]: wa.me/${sender.split("@")[0]}\n[Umur]: ${umure} Tahun\n[Asal]: ${asal}\n\nUntuk menggunakan bot silahkan kirim ${prefix}help/menu\n\nTotal Pengguna: ${user.length} Orang\`\`\``, text, {quoted: mek})
+						client.sendMessage(from, `「DATA USER」\n\nHai kak ${pushname2}! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data Pendaftaran Kamu : \n\nMendaftar Pada ${date} ${time}\n\n[Nama]: ${jeneng}\n[Nomor]: wa.me/${sender.split("@")[0]}\n[Umur]: ${umure} Tahun\n[Asal]: ${asal}\n\nUntuk menggunakan bot silahkan kirim ${prefix}help/menu\n\nTotal Pengguna: ${user.length} Orang\`\`\``, text, {quoted: mek})
 					break 
 			case 'help':
 			case 'menu':
@@ -436,6 +435,7 @@ async function starts() {
 				if (!isUser) return reply(mess.only.userB)
 				uptime = process.uptime()
 				user.push(sender)
+				buffer = await getBuffer(me.imgUrl)	
 				myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
                 myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
                 var tgl = new Date();
@@ -446,7 +446,7 @@ async function starts() {
                 var yy = tgl.getYear()
                 var year = (yy < 1000) ? yy + 1900 : yy;
                 const tanggal = `${thisDay}, ${day} - ${myMonths[bulan]} - ${year}`
-                await costum(help(prefix, instagram, name, uptime, pushname2, user, tanggal, jam), text, FarhanGans, replySet)
+                await costum(help(prefix, instagram, name, uptime, pushname2, buffer, user, tanggal, jam), text, FarhanGans, replySet)		
     				break
 
 				case 'bahasa':
@@ -463,7 +463,7 @@ async function starts() {
 					me = client.user
 					user.push(sender)
 					uptime = process.uptime()
-					teks = `⟩「INFO MYTH BOT」\n\n➢ *Nama Bot* : ${me.name}\n⟩➢ *Nomor Bot* : @${me.jid.split('@')[0]}\n⟩➢ *Prefix Bot* :「${prefix}」\n⟩➢ *Total Block* : ${blocked.length}\n⟩➢ *Bot telah Aktif selama * : ${kyun(uptime)}\n\n⟩➢ Total Pengguna: *${user.length}* User\n⟩➢ *Instagram* : https://www.instagram.com/ayyiin⟩➢ *Thanks To* :\n⟩➢ Fxc7 \n⟩➢ MahankBarBar`
+					teks = `「INFO MYTH BOT」\n\n➢ *Nama Bot* : ${me.name}\n➢ *Nomor Bot* : @${me.jid.split('@')[0]}\n➢ *Prefix Bot* :「${prefix}」\n➢ *Total Block* : ${blocked.length}\n➢ *Bot Aktif selama * : ${kyun(uptime)}\n➢ Total Pengguna: *${user.length}* User\n➢ *Instagram* : https://www.instagram.com/ayyiin\n➢ *Thanks To* :\n➢ Fxc7 \n➢ MahankBarBar`
 					buffer = await getBuffer(me.imgUrl)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: teks, contextInfo:{mentionedJid: [me.jid]}})
 					break
