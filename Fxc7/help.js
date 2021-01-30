@@ -1,10 +1,6 @@
 
 const help = (prefix, instagram, name, uptime, pushname2, user, tanggal, jam) => { 
 	return `
-	
-\`\`\`Follow My Instagram\`\`\`
-${instagram}
-
 ┏━━━━━❬ *ABOUT ${name}* ❭━━━━━━━
 ┃
 ┃ Hai *${pushname2}* 👋 
@@ -75,7 +71,6 @@ ${instagram}
 ✦ *${prefix}tomp3*
 ✦ *${prefix}ocr*
 
-
 *ERROR*
 ✦ *${prefix}imoji [❤️]*
 ✦ *${prefix}cgbutton [Teks]*
@@ -120,6 +115,7 @@ ${instagram}
 ✦ *${prefix}cphlogo [Teks/BOT]*
 ✦ *${prefix}quotemaker [tx/wtrmk/tema]*
 ✦ *${prefix}nulis [nama/kelas/text]*
+*ERROR*
 
 
 ❒ 〖GROUP MENU〗
@@ -286,6 +282,7 @@ ${instagram}
 ✦ *${prefix}smule [Link Video Smule]*
 
 
+Follow My Instagram : ${instagram}
 Owner : Rawrrr
 Credit : Fxc7 
 Bot : MYTH
