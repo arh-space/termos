@@ -1,22 +1,19 @@
 const donasi = (Ig, name) => { 
 	return `       
 ┏━━━━━━━━━━━━━━━━━━━━
-┃          𝗗𝗢𝗡𝗔𝗦𝗜  
-┣━━━━━━━━━━━━━━━━━━━━
-┣━⊱ *DONASI SEIKHLASNYA:)* ❉⊰━━✿
-┃  
-┣━⊱ *OVO*
-┣⊱ 08311800241
-┣━⊱ *PULSA*
-┣⊱ 08311800241
-┃
-┣━━━━━━━━━━━━━━━━━━━━
+┃        𝗗𝗢𝗡𝗔𝗦𝗜  
+┗━━━━━━━━━━━━━━━━━━━━
+
+┏⊱ *OVO/DANA*
+┗⊱ 082285855034
+
+┏━━━━━━━━━━━━━━━━━━━━
 ┃  *BOT BY ${name}*
 ┗━━━━━━━━━━━━━━━━━━━━
+
 Note:
-Jika Gamau Donasi Setidaknya Follow IG Ngab:D
-Kalo Dah Donasi Silahkan Invit Di Group Kalian:)
-Makasih:)
+Donasi Seikhlasnya, Jika Donasi terlalu berat Setidaknya Follow IG yaa~ >:D
+Terima kasih :)
 
 ${Ig}
 
