@@ -427,7 +427,7 @@ async function starts() {
 					asal = reg.split("/")[2];
 						user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `「DATA PENDAFTARAN USER」\n\nHai kak ${pushname2}! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data Pendaftaran Kamu : \n\nMendaftar Pada ${date} ${time}\n\n[Nama]: ${jeneng}\n[Nomor]: wa.me/${sender.split("@")[0]}\n[Umur]: ${umure} Tahun\n[Asal]: ${asal}\n\nUntuk menggunakan bot silahkan kirim ${prefix}help/menu\n\nTotal Pengguna: ${user.length} Orang, text, {quoted: mek})
+						client.sendMessage(from, `「DATA PENDAFTARAN USER」\n\nHai kak ${pushname2}! Selamat kamu telah terdaftar sebagai User MYTH Bot.\n\nBerikut Data Pendaftaran Kamu : \n\nMendaftar Pada ${date} ${time}\n\n[Nama]: ${jeneng}\n[Nomor]: wa.me/${sender.split("@")[0]}\n[Umur]: ${umure} Tahun\n[Asal]: ${asal}\n\nUntuk menggunakan bot silahkan kirim ${prefix}help/menu\n\nTotal Pengguna: ${user.length} Orang`, text, {quoted: mek})
 					break 
 			case 'help':
 			case 'menu':
