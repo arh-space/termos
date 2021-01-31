@@ -435,7 +435,6 @@ async function starts() {
 				if (!isUser) return reply(mess.only.userB)
 				uptime = process.uptime()
 				user.push(sender)
-				buffer = await getBuffer(me.imgUrl)	
 				myMonths = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"];
                 myDays = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'];
                 var tgl = new Date();
